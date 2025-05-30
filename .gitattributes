@@ -1,0 +1,41 @@
+# Define o comportamento padrão para normalização de texto
+* text=auto
+
+# Arquivos de texto que serão sempre normalizados para LF
+*.java text eol=lf
+*.xml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.properties text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.sql text eol=lf
+*.txt text eol=lf
+
+# Arquivos que serão sempre convertidos para o sistema nativo
+*.bat text eol=crlf
+*.cmd text eol=crlf
+mvnw text eol=lf
+*.sh text eol=lf
+
+# Arquivos que são binários e não devem ser modificados
+*.jar binary
+*.war binary
+*.ear binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.class binary
+
+# Definir estratégias de merge
+*.properties merge=text
+*.java merge=java
