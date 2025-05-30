@@ -1,0 +1,27 @@
+# Nome da aplicação
+spring.application.name=payment-api
+
+# Configuração do banco de dados
+spring.datasource.url=jdbc:mysql://localhost:3306/payment_system?useSSL=false&serverTimezone=UTC
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha
+
+# Configuração do Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+spring.jpa.properties.hibernate.format_sql=true
+
+# Configuração do servidor
+server.port=8080
+server.error.include-message=always
+
+# JWT Configuration (IMPORTANTE: Gere uma chave segura diferente desta!)
+jwt.secret=GERE_UMA_CHAVE_SEGURA_AQUI
+jwt.expiration=3600000
+jwt.refresh-token.expiration=604800000
+
+# Configurações de Swagger/OpenAPI
+springdoc.api-docs.path=/v3/api-docs
+springdoc.swagger-ui.path=/swagger-ui.html
+springdoc.swagger-ui.operationsSorter=method

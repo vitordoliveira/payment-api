@@ -81,9 +81,9 @@ ehthumbs.db
 Thumbs.db
 
 # Application properties with sensitive data
-# Uncomment if you need to exclude
-# src/main/resources/application-*.properties
-# src/main/resources/application-*.yml
+src/main/resources/application.properties
+src/main/resources/application-*.properties
+!src/main/resources/application.properties.example
 
 # JaCoCo coverage reports
 .coverage-report/
