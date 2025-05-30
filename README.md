@@ -1,13 +1,11 @@
-<div align="center">
-  <h1>💳 Payment API</h1>
-  <p>A Simplified Payment System Using Spring Boot</p>
+## 💳 Payment API
+  A Simplified Payment System Using Spring Boot
   
   ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.3-6DB33F?style=for-the-badge&logo=spring-boot)
   ![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk)
   ![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
   ![JWT](https://img.shields.io/badge/JWT-Auth-000000?style=for-the-badge&logo=json-web-tokens)
   ![Swagger](https://img.shields.io/badge/Swagger-API_Docs-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
-</div>
 
 ## 📋 About the Project
 
