@@ -70,16 +70,28 @@ cd payment-api
 
 ### 2. Configure the Database
 
-Create a new MySQL database:
+Create a MySQL database:
 ```sql
-CREATE DATABASE payment_api_db;
+CREATE DATABASE payment_system;
 ```
-Then set your credentials in the file src/main/resources/application.properties:
+
+Copy the example configuration file:
+```bash
+cp src/main/resources/application.properties.example src/main/resources/application.properties
+```
+
+Then edit src/main/resources/application.properties with your credentials:
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/payment_api_db?useSSL=false&serverTimezone=UTC
+spring.datasource.url=jdbc:mysql://localhost:3306/payment_system?useSSL=false&serverTimezone=UTC
 spring.datasource.username=your_username
 spring.datasource.password=your_password
+
+# IMPORTANT: Generate a new secret key for JWT
+jwt.secret=your_jwt_secret_key
 ```
+
+⚠️ The application.properties file is listed in .gitignore to prevent committing credentials.  
+Never commit this file with real passwords or secret keys.
 
 ### 3. Build and Run
 
