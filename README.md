@@ -1,5 +1,4 @@
 # 💳 Payment API
-
 A Simplified Payment System Using Spring Boot
 
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.3-6DB33F?style=for-the-badge&logo=spring-boot)
@@ -8,7 +7,7 @@ A Simplified Payment System Using Spring Boot
 ![JWT](https://img.shields.io/badge/JWT-Auth-000000?style=for-the-badge&logo=json-web-tokens)
 ![Swagger](https://img.shields.io/badge/Swagger-API_Docs-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
 
-## About the Project
+## 📋 About the Project
 
 Payment API is a REST-based system for managing financial transactions between users, built with Spring Boot and Java. This project supports essential banking operations such as deposits, withdrawals, and transfers, secured with JWT authentication and refresh tokens.
 
@@ -18,85 +17,94 @@ Key points include:
 - **REST API**: Well-defined RESTful endpoints with appropriate responses  
 - **Documentation**: Fully documented using Swagger/OpenAPI  
 
-## Implemented Features
+## 🚀 Implemented Features
 
-### Authentication & Users
+### 👤 Authentication & Users
 - ✅ User registration  
 - ✅ Login with JWT token generation  
 - ✅ Refresh token mechanism for session renewal  
 - ✅ Full CRUD for user entities  
 
-### Accounts & Transactions
+### 💰 Accounts & Transactions
 - ✅ Account creation and linking to users  
 - ✅ Real-time balance inquiries  
 - ✅ Deposit and withdrawal operations  
 - ✅ Transfers between accounts  
 - ✅ Transaction history and details  
 
-### Security
+### 🔒 Security
 - ✅ Bearer token (JWT) authentication  
 - ✅ Endpoint protection via Spring Security  
 - ✅ Request data validation  
 - ✅ Token expiration control  
 
-## Technologies Used
+## 🛠️ Technologies Used
 
-| Technology       | Version | Purpose                             |
-|------------------|---------|-------------------------------------|
-| Spring Boot      | 3.2.3   | Main framework                      |
-| Spring Security  | 3.2.3   | Authentication and authorization    |
-| Spring Data JPA  | 3.2.3   | Data persistence                    |
-| MySQL            | 8.0     | Database                            |
-| Swagger/OpenAPI  | 2.0.2   | API documentation                   |
-| JWT              | 0.11.5  | Token-based authentication          |
-| Maven            | 3.6+    | Dependency management               |
-| Java             | 17      | Programming language                |
-| Spring Actuator  | 3.2.3   | Application monitoring              |
+| Technology         | Version | Purpose                             |
+|--------------------|---------|-------------------------------------|
+| Spring Boot        | 3.2.3   | Main framework                      |
+| Spring Security    | 3.2.3   | Authentication and authorization    |
+| Spring Data JPA    | 3.2.3   | Data persistence                    |
+| MySQL              | 8.0     | Database                            |
+| Swagger/OpenAPI    | 2.0.2   | API documentation                   |
+| JWT                | 0.11.5  | Token-based authentication          |
+| Maven              | 3.6+    | Dependency management               |
+| Java               | 17      | Programming language                |
+| Spring Actuator    | 3.2.3   | Application monitoring              |
 
-## Requirements
+## ⚙️ Requirements
 
 - JDK 17 or later  
 - Maven 3.6+  
 - MySQL 8.0+  
 - Java IDE (recommended: VS Code, IntelliJ IDEA, or Eclipse)  
 
-## Installation and Execution
+## 📦 Installation and Execution
 
-1. Clone the Repository:
+### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/vitordoliveira/payment-api.git
 cd payment-api
 ```
 
-2. Configure the Database:
+### 2. Configure the Database
+
+Create a new MySQL database:
 ```sql
 CREATE DATABASE payment_api_db;
 ```
-In src/main/resources/application.properties:
+Then set your credentials in the file src/main/resources/application.properties:
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/payment_api_db?useSSL=false&serverTimezone=UTC
 spring.datasource.username=your_username
 spring.datasource.password=your_password
 ```
 
-3. Build and Run:
+### 3. Build and Run
+
 ```bash
+# Compile the project
 ./mvnw clean install
+
+# Run the application
 ./mvnw spring-boot:run
 ```
 The API will be available at http://localhost:8080
 
-## Swagger API Documentation
+## 📚 Swagger API Documentation
 
 A comprehensive and interactive Swagger UI is available at:
-http://localhost:8080/swagger-ui/index.html
 
+• http://localhost:8080/swagger-ui/index.html
+
+This interface lets you:
 - View all available endpoints  
 - Test requests directly  
 - Examine data models and responses  
 - Authenticate to test protected endpoints  
 
-## Project Structure
+## 🧩 Project Structure
 
 ```
 PAYMENT-API/
@@ -121,9 +129,10 @@ PAYMENT-API/
 │   └── service/         # Business logic
 ```
 
-## Main API Endpoints
+## 🔌 Main API Endpoints
 
 ### Authentication
+
 ```http
 # User registration
 POST /api/auth/register
@@ -135,7 +144,9 @@ Content-Type: application/json
   "email": "user@example.com",
   "fullName": "John Doe"
 }
+```
 
+```http
 # Login
 POST /api/auth/login
 Content-Type: application/json
@@ -144,7 +155,9 @@ Content-Type: application/json
   "username": "user123",
   "password": "password123"
 }
+```
 
+```http
 # Refresh token
 POST /api/auth/refreshtoken
 Content-Type: application/json
@@ -155,6 +168,7 @@ Content-Type: application/json
 ```
 
 ### Account Management
+
 ```http
 # Check balance
 GET /api/accounts/balance
@@ -184,6 +198,7 @@ Content-Type: application/json
 ```
 
 ### Transactions
+
 ```http
 # Create a transfer
 POST /api/transactions
@@ -196,29 +211,32 @@ Content-Type: application/json
   "receiverId": 2,
   "description": "Payment"
 }
+```
 
+```http
 # List transactions
 GET /api/transactions
 Authorization: Bearer eyJhbGciOiJIUzI1...
+```
 
+```http
 # Get transaction details
 GET /api/transactions/{id}
 Authorization: Bearer eyJhbGciOiJIUzI1...
 ```
 
-## Monitoring
+## 🔍 Monitoring
 
 Spring Actuator provides essential monitoring features:
-```text
-/actuator/health — Application health status
-/actuator/info — Application information
-```
 
-## Author
+• `/actuator/health` — Application health status  
+• `/actuator/info` — Application information  
+
+## 👤 Author
 
 Vitor Oliveira  
 • [GitHub](https://github.com/vitordoliveira)
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License.
